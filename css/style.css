@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* COMMON */
+body{   
+    font-family: Arial, sans-serif;
+}
+
+.bg-color{
+    background-color: #EDF2F6;
+    box-shadow: 5px 5px 20px #80808054
+}
+
+.container{
+    margin: 0 auto;
+}
+
+.pad20{
+    padding: 20px;
+}
+
+.pad40{
+    padding: 50px;
+}
+
+.padlf{
+    padding-left: 15px;
+}
+
+.divider{
+    border: 2px solid white;
+}
+
+.done{
+    text-decoration: line-through;
+    text-decoration-color: black;
+}
+
+ul{
+    list-style: none;
+}
+
+.task-list li{
+    margin: 15px 0px;
+}
+
+h3{
+    font-size: 15px;
+    color: #434851;
+}
+
+.category{
+    color: white;
+    height: 30px;
+    padding: 5px 15px;
+    border-radius: 15px; 
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.editorial{
+    background-color: #14AAF5;
+}
+
+.q1-goals{
+    background-color: #AB5DE6;
+}
+
+.recruiting{
+    background-color: #2CC6AB;
+}
+
+.mobile{
+    background-color: #FF9B00;
+}
+
+.website{
+    background-color: #EC4A9D;
+}
+
+.sales{
+    background-color: #A3D116;
+}
+
+
+.circle{
+    text-align: center;
+    border-radius: 50%;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+
+}
+
+.check{
+    border: 2px solid #39CAB0;
+    color: #39CAB0;
+}
+
+
+.cross{
+    border: 2px solid red;
+    color: red;
+}
+
+/* HEADER */
+.box-logo{
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* MAIN */
+.box-main{
+    width: 60%;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+/* ADD-TASK */
+
+.add-task{
+    text-align: center;
+}
+
+.new-task, .btn{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.new-task{
+    border: 1px solid lightgray;
+    width: 50%;
+}
+
+.btn{
+    background-color: #14AAF5;
+    color: white;
+    border: 0;
+    margin: 0 10px;
+
+}
+
+/* TASK LIST */
+
+.task{
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px #80808054;
+}
+
+.text-task, .category, .check, .cross{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.text-task{
+    line-height: 50px; 
+    color: #434B56;
+    padding-left: 10px;
+}
