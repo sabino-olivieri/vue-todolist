@@ -17,7 +17,8 @@ createApp({
 
     created() {
         const jsonToDo = localStorage.getItem("todoListKey");
-        if (jsonToDo != "") {
+        console.log(jsonToDo);
+        if (jsonToDo != null) {
             const newArray = JSON.parse(jsonToDo);
             this.todoList = [...newArray];
         }
