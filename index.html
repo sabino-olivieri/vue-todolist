@@ -7,6 +7,8 @@
     <title>Vue To Do List</title>
     <!-- vue js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -29,8 +31,17 @@
 
             <!-- add task -->
             <div class="add-task container pad20">
-                <input class="new-task" type="text" placeholder="es: Fare la spesa...">
-                <button class="btn">Add Task</button>
+                <input class="new-task" type="text" placeholder="es: Fare la spesa..." v-model="newTask.text" @keydown.enter="addTask">
+                <select name="category" id="category-list" v-model="newTask.category">
+                    <option value="" selected>Categoria</option>
+                    <option value="editorial">Editorial</option>
+                    <option value="recruiting">Recruiting</option>
+                    <option value="q1-goals">Q1-goals</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="website">Website</option>
+                    <option value="sales">Sales</option>
+                </select>
+                <button class="btn" @click="addTask">Add Task</button>
             </div>
             <!-- /addtask -->
 
@@ -39,14 +50,19 @@
             <!-- task list -->
             <div class="task-list container pad40">
 
-
+                <div class="task text-center" v-show="todoList.length === 0">
+                    <span>Non hai nulla da fare, aggiungi qualcosa.</span>
+                </div>
 
                 <ul>
-                    <li>
+                    <li v-for="(element, index) in todoList" @click="doneNotDone(index)">
                         <div class="task padlf">
-                            <span class="circle check">&check;</span>
-                            <span class="text-task done">Quarterly Newsletter</span>
-                            <span class="category editorial done">Editorial</span>
+                            <span :class="element.done.toString()"></span>
+                            <div :class="{'done' : todoList[index].done}">
+
+                                <span class="text-task" >{{ element.text }}</span>
+                                <span class="category" :class="element.category">{{ element.category }}</span>
+                            </div>
                         </div>
                     </li>
                 </ul>

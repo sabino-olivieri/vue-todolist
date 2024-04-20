@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,115 +6,119 @@
 }
 
 /* COMMON */
-body{   
+body {
     font-family: Arial, sans-serif;
 }
 
-.bg-color{
+.bg-color {
     background-color: #EDF2F6;
     box-shadow: 5px 5px 20px #80808054
 }
 
-.container{
+.container {
     margin: 0 auto;
 }
 
-.pad20{
+.pad20 {
     padding: 20px;
 }
 
-.pad40{
+.pad40 {
     padding: 50px;
 }
 
-.padlf{
+.padlf {
     padding-left: 15px;
 }
 
-.divider{
+.divider {
     border: 2px solid white;
 }
 
-.done{
+.done {
     text-decoration: line-through;
     text-decoration-color: black;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-.task-list li{
+.task-list li {
     margin: 15px 0px;
+    cursor: pointer;
 }
 
-h3{
+h3 {
     font-size: 15px;
     color: #434851;
 }
 
-.category{
+.category {
     color: white;
     height: 30px;
     padding: 5px 15px;
-    border-radius: 15px; 
-    display: inline-block;
+    border-radius: 15px;
     margin-left: 10px;
 }
 
-.editorial{
+.editorial {
     background-color: #14AAF5;
 }
 
-.q1-goals{
+.q1-goals {
     background-color: #AB5DE6;
 }
 
-.recruiting{
+.recruiting {
     background-color: #2CC6AB;
 }
 
-.mobile{
+.mobile {
     background-color: #FF9B00;
 }
 
-.website{
+.website {
     background-color: #EC4A9D;
 }
 
-.sales{
+.sales {
     background-color: #A3D116;
 }
 
 
-.circle{
+/* .circle{
     text-align: center;
     border-radius: 50%;
     font-size: 10px;
     width: 20px;
     height: 20px;
 
-}
+} */
 
-.check{
-    border: 2px solid #39CAB0;
+.true::before {
     color: #39CAB0;
+    font-size: 2rem;
+    font: var(--fa-font-solid);
+    content: '\f058';
 }
 
 
-.cross{
-    border: 2px solid red;
+.false::before {
+    font-size: 2rem;
+    font: var(--fa-font-solid);
     color: red;
+    content: '\f057';
 }
 
 /* HEADER */
-.box-logo{
+.box-logo {
     text-align: center;
     margin: 0 auto;
 }
 
 /* MAIN */
-.box-main{
+.box-main {
     width: 60%;
     margin-top: 50px;
     border-radius: 10px;
@@ -122,44 +126,58 @@ h3{
 
 /* ADD-TASK */
 
-.add-task{
+.add-task {
     text-align: center;
 }
 
-.new-task, .btn{
+.new-task,
+.btn {
     padding: 10px;
-    border-radius: 5px;
 }
 
-.new-task{
-    border: 1px solid lightgray;
+.new-task {
+    border-radius: 5px 0 0 5px;
+    border: 0;
+    border-right: 0;
     width: 50%;
 }
 
-.btn{
+#category-list {
+    border: 0;
+    padding: 10px;
+    border-radius: 0px 5px 5px 0;
+}
+
+.btn {
     background-color: #14AAF5;
     color: white;
     border: 0;
     margin: 0 10px;
+    border-radius: 5px;
 
 }
 
 /* TASK LIST */
 
-.task{
+.task {
     height: 50px;
+    display: flex;
+    align-items: center;
     background-color: white;
     border-radius: 5px;
     box-shadow: 5px 5px 20px #80808054;
 }
 
-.text-task, .category, .check, .cross{
-    display: inline-block;
-    vertical-align: middle;
-}
 
-.text-task{
-    line-height: 50px; 
+.text-task {
     color: #434B56;
     padding-left: 10px;
+}
+
+.flex {
+    display: flex;
+}
+
+.text-center {
+    justify-content: center;
 }
