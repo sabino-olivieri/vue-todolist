@@ -47,6 +47,7 @@ ul {
 .task-list li {
     margin: 15px 0px;
     cursor: pointer;
+    position: relative;
 }
 
 h3 {
@@ -180,4 +181,17 @@ h3 {
 
 .text-center {
     justify-content: center;
+}
+
+.delete {
+
+    border-radius: 50%;
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.414);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    right: 15px;
+    top: 50%;
+    cursor: pointer;
+    
 }

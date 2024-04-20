@@ -55,15 +55,20 @@
                 </div>
 
                 <ul>
-                    <li v-for="(element, index) in todoList" @click="doneNotDone(index)">
-                        <div class="task padlf">
+                    <li v-for="(element, index) in todoList" >
+                        <div @click="doneNotDone(index)" class="task padlf">
                             <span :class="element.done.toString()"></span>
                             <div :class="{'done' : todoList[index].done}">
-
                                 <span class="text-task" >{{ element.text }}</span>
                                 <span class="category" :class="element.category">{{ element.category }}</span>
                             </div>
+
                         </div>
+                        <div class="delete" @click="deleteElement(index)"><i class="fa-solid fa-trash"></i></div>    
+                            
+                            
+                            
+
                     </li>
                 </ul>
 

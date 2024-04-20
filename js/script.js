@@ -20,6 +20,8 @@ createApp({
             console.log({...this.newTask});
 
             this.todoList.push({...this.newTask});
+            this.newTask.text = "";
+            this.newTask.category = "";
 
         },
 
@@ -28,9 +30,13 @@ createApp({
             // se è stata fatta crea una copia, lo cancella dall'array e inserisce la copia all'ultimo posto
             if(this.todoList[index].done){
                 const lastTask = {...this.todoList[index]}
-                this.todoList.splice(index, 1)
+                this.todoList.splice(index, 1);
                 this.todoList.push(lastTask);
             }
+        },
+
+        deleteElement(index) {
+            this.todoList.splice(index, 1);
         }
     }
 }).mount("#app")
