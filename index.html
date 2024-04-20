@@ -39,12 +39,10 @@
                         @keydown.enter="addTask">
                     <select name="category" id="category-list" v-model="newTask.category">
                         <option value="" selected>Categoria</option>
-                        <option value="editorial">Editorial</option>
-                        <option value="recruiting">Recruiting</option>
-                        <option value="q1-goals">Q1-goals</option>
-                        <option value="mobile">Mobile</option>
-                        <option value="website">Website</option>
-                        <option value="sales">Sales</option>
+                        <option value="lavoro">Lavoro</option>
+                        <option value="personale">Personale</option>
+                        <option value="hobby">Hobby</option>
+                        <option value="spesa">Spesa</option>
                     </select>
                 </div>
 
@@ -69,8 +67,8 @@
                         <div class ="down flex center" v-show="todoList.length > 1" @click="(index != todoList.length - 1) ? moveDown(index) : ''">
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
-                        <div @click="doneNotDone(index)" class="task padlf gap">
-                            <span :class="element.done.toString()"></span>
+                        <div class="task padlf gap" @click="doneNotDone(index)">
+                            <span :class="element.done ? 'task-done' : 'task-not-done'"></span>
                             <div :class="{'done' : todoList[index].done}" class="flex gap">
                                 <span class="text-task">{{ element.text }}</span>
                                 <span :class="element.category != '' ? element.category + ' category' : ''">{{ element.category }}</span>

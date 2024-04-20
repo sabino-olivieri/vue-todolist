@@ -62,19 +62,19 @@ h3 {
     border-radius: 15px;
 }
 
-.editorial {
+.lavoro {
     background-color: #14AAF5;
 }
 
-.q1-goals {
+.personale {
     background-color: #AB5DE6;
 }
 
-.recruiting {
+.hobby {
     background-color: #2CC6AB;
 }
 
-.mobile {
+.spesa {
     background-color: #FF9B00;
 }
 
@@ -86,17 +86,7 @@ h3 {
     background-color: #A3D116;
 }
 
-
-/* .circle{
-    text-align: center;
-    border-radius: 50%;
-    font-size: 10px;
-    width: 20px;
-    height: 20px;
-
-} */
-
-.true::before {
+.task-done::before {
     color: #39CAB0;
     font-size: 2rem;
     font: var(--fa-font-solid);
@@ -104,7 +94,7 @@ h3 {
 }
 
 
-.false::before {
+.task-not-done::before {
     font-size: 2rem;
     font: var(--fa-font-solid);
     color: red;
