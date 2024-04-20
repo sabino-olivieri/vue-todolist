@@ -60,7 +60,6 @@ h3 {
     height: 30px;
     padding: 5px 15px;
     border-radius: 15px;
-    margin-left: 10px;
 }
 
 .editorial {
@@ -136,11 +135,21 @@ h3 {
     padding: 10px;
 }
 
+.new-task:focus {
+    border: #14AAF5 ;
+}
+
 .new-task {
     border-radius: 5px 0 0 5px;
     border: 0;
     border-right: 0;
-    width: 50%;
+    width: 80%;
+}
+
+.inputSelect{
+    background-color: white;
+    border-radius: 5px;
+    width: 70%;
 }
 
 #category-list {
@@ -153,7 +162,6 @@ h3 {
     background-color: #14AAF5;
     color: white;
     border: 0;
-    margin: 0 10px;
     border-radius: 5px;
 
 }
@@ -163,6 +171,7 @@ h3 {
 .task {
     height: 50px;
     display: flex;
+    width: 100%;
     align-items: center;
     background-color: white;
     border-radius: 5px;
@@ -172,14 +181,16 @@ h3 {
 
 .text-task {
     color: #434B56;
-    padding-left: 10px;
+
 }
 
 .flex {
     display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
-.text-center {
+.center {
     justify-content: center;
 }
 
@@ -194,4 +205,17 @@ h3 {
     top: 50%;
     cursor: pointer;
     
+}
+
+.gap {
+    gap: 10px;
+}
+
+.down, .up {
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    background-color: grey;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
 }
