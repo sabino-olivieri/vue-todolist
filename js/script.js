@@ -14,6 +14,15 @@ createApp({
 
         }
     },
+
+    created() {
+        const jsonToDo = localStorage.getItem("todoListKey");
+        if (jsonToDo != ""){
+            const newArray = JSON.parse(jsonToDo);
+            this.todoList = newArray;
+        }
+    },
+
     methods: {
         addTask() {
             if(this.newTask.text ===  "") return;
@@ -23,6 +32,7 @@ createApp({
             this.newTask.text = "";
             this.newTask.category = "";
 
+            this.saveToDo();
         },
 
         doneNotDone(index) {
@@ -33,10 +43,18 @@ createApp({
                 this.todoList.splice(index, 1);
                 this.todoList.push(lastTask);
             }
+            this.saveToDo();
         },
 
         deleteElement(index) {
             this.todoList.splice(index, 1);
+            this.saveToDo();
+        },
+
+        saveToDo() {
+            const jsonToDo = JSON.stringify(this.todoList);
+            console.log(jsonToDo);
+            localStorage.setItem("todoListKey", jsonToDo);
         }
     }
 }).mount("#app")
